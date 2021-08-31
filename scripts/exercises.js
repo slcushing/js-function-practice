@@ -11,7 +11,7 @@
       result = num1;
     } else {
       (num1 < num2)
-      result = 'function error max';
+      result = num2;
     }
     return result;
   }
@@ -20,9 +20,19 @@
   // ---------------------
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
-
-
-
+  function maxOfThree(num1,num2,num3) {
+    let largest;
+    if (num1 > num2 && num1 > num3) {
+      return num1;
+    } else if (num2 > num1 && num2 > num3) {
+      return num2;
+    } else (num3 > num1 && num3 > num2) 
+    {
+      return num3;
+    }
+    return largest
+  }
+  
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
