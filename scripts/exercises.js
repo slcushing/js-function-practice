@@ -6,7 +6,14 @@
   // ---------------------
 
   function max(num1, num2) {
-    if num1 > num2
+    let result;
+    if (num1 > num2) {
+      result = num1;
+    } else {
+      (num1 < num2)
+      result = 'function error max';
+    }
+    return result;
   }
 
 
