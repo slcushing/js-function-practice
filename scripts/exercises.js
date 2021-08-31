@@ -32,11 +32,17 @@
     }
     return largest
   }
-  
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
-
+    function isVowel(letter) {
+      let result;
+      if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
+        result = true;
+      } else {result = false;
+      }
+      return result;
+    }
 
 
   // ---------------------
