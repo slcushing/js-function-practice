@@ -32,8 +32,10 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-
-
+var cool = function () {
+  console.log("Something Cool!");
+}
+cool();
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -52,7 +54,11 @@ function sayHi() {
 setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
+const hi = function() {
+  alert("Hello, World!");
+}
 
+setTimeout(hi, 2000);
 
 // -----------------------------------------------
 
