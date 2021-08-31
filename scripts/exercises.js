@@ -77,7 +77,15 @@
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
-
+   function findLongestWord(arr) {
+    let word = "";
+    for (let i = 0; i < arr.length; i++) {
+      if (word.length < arr[i].length) {
+        word = arr[i];}
+      }
+    }
+    return word;
+    }
 
 
   // ---------------------
