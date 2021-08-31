@@ -88,7 +88,8 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
-
+ 
+//[c] 
 
 // -----------------------------------------------
 
@@ -110,8 +111,10 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-
-
+var reverseStr = function (str) {
+  return str.split("").reverse().join("")
+}
+reverseStr("hello");
 
 // -----------------------------------------------
 
@@ -145,8 +148,16 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
-
-
+var spanishColor = function(colorName) {
+    var colorNames = {
+      'rojo': '#ff0000',
+      'blanco': '#ffffff',
+      'azul': '#0000ff',
+      'verde': '#00ff00',
+      'negro': '#000000',
+    }
+    return colorNames [colorName.toLowerCase()];
+}
 
 // -----------------------------------------------
 
@@ -163,7 +174,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+var foo;
+  foo = "bar";
 
 // -----------------------------------------------
 
