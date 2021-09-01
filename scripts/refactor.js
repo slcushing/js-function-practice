@@ -89,7 +89,9 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
  
-//[c] 
+//[c] "z" shows first becuase the function that "y" is contined in
+//  has a setTimeout on it, which causes the function to have to 
+// pause or not fire until after the specified amount of time
 
 // -----------------------------------------------
 
@@ -296,6 +298,7 @@ var accelerate = function(amount) {
 // Put your answer below -------------------------
 
 // Sets speed to NaN because the amount isn't clearly definded anywhere.
+// 
 var accelerate = function(amount) {
   var speed = 0;
   var amount = 
@@ -344,6 +347,12 @@ var callLater = function(timeout, callback) {
 };
 
 // Put your answer below -------------------------
+var callLater = function(timeout, callback) {
+  setTimeout (timeout,callback) 
+    alert ('Timeout');
+  };
+
+  setTimeout (callLater, 1000);
 
 
 // -----------------------------------------------
