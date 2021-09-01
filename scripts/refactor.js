@@ -199,7 +199,10 @@ var callTenTimes = function(callback) {
 // callTenTime(functionName);
 
 // Put your answer below -------------------------
-
+var callNTimes = function(callback){
+  var range = Array.from(Array(num).keys());
+  range.forEach(callback);
+};
 
 // -----------------------------------------------
 
@@ -227,8 +230,19 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
+(function game () {
+  var score = 0;
 
+  var increaseScore = function() {
+    score++;
+  };
 
+  var decreaseScore = function() {
+    score--;
+  };
+})();
+
+// In order to close code from global scope, I attempted to wrap it in a function with closures.
 
 // -----------------------------------------------
 
@@ -248,7 +262,12 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+ var addNumbers = function(num1,num2) {
+   var twoPlusTwo = (num1 + num2);
+  console.log(num1 + num2);
+ };
 
+ var twoPlusTwo = addNumbers(2,2);
 
 
 // -----------------------------------------------
@@ -276,6 +295,12 @@ var accelerate = function(amount) {
 
 // Put your answer below -------------------------
 
+// Sets speed to NaN because the amount isn't clearly definded anywhere.
+var accelerate = function(amount) {
+  var speed = 0;
+  var amount = 
+  speed += amount;
+};
 
 
 // -----------------------------------------------
