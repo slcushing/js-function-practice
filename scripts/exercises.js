@@ -15,8 +15,12 @@
     }
     return result;
   }
-
-
+// if (num1 > num2) {
+//     return num1;
+// } else {
+//     return num2;
+// }
+  
   // ---------------------
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
@@ -32,6 +36,16 @@
     }
     return largest
   }
+
+  // if (num1 > num2 && num1 > num3){
+  //   return num1;
+  // } else if (num2 > num3) {
+  //   return num2;
+  // } else {
+  //   return num3;
+  // }
+
+
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
@@ -43,13 +57,21 @@
       }
       return result;
     }
+
+// 'aeiou'.includes(char);
+
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
-    // function rovarspraket(text) {
-    //     const consonants = str.match
-
-    // }
+    function rovarspraket(text) {
+        text = text.toLowerCase().split(""); // splits phrase into an array of letters : 'fun' => ['f', 'u', 'n'] ARRAY!
+        for (let i = 0; i< text.length; i++) { // let (keeps within code block, NOT LEAK OUT)
+          if('abcdfghjklmnpqrstvwxy'.includes(text[i])){ //using 'i' to index the array
+            text[i] = text[i] + 'o' + text[i]; // 'f' => 'fof'; ['fof', 'u', 'non']
+          } 
+        }
+        return text.join(""); //can call .join to call all indicies to slam them together
+    }
       
 
   // ---------------------
@@ -62,6 +84,22 @@
      return (num1 * num2 * num3 * num4);
    }
   
+  //  function sum(arr){
+  //    let sum = 0
+  //     for(let i = 0; i < arr.length; i++) {
+  //   // sum += arr[i];
+  //   sum = sum + arr[i];
+  // }
+  // return sum;
+  //  }
+
+  // function multiply(arr) {
+  //   let product = 1;
+  //   for(let i = 0; i <arr.length; i++) {
+  //     product = product * arr[i];
+  //   }
+  //   return product;
+  // }
 
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
@@ -72,19 +110,32 @@
      var joinArray = reverseArray.join ("");
      return joinArray;
    }
+//.shift and .unshift (look up on MDN) targeting the beginning of an array
+//.push and .pop target the end of an array
+
+// function reverst(str) { // happy
+//   const strArray = [];
+
+//   for (let i =; i < str.length; i++) {
+//     strArray.unshift(str[i]); // .unshift adds to the BEGINNING
+//   }
+//   return strArray.join("");
+// }
+
+//  str.split("").reverse().join("");
 
 
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
    function findLongestWord(arr) {
-    let word = "";
-    for (let i = 0; i < arr.length; i++) {
-      if (word.length < arr[i].length) {
-        word = arr[i];}
+    let length = 0; 
+    for (let i = 0; i < arr.length; i++) { 
+      if (arr[i].length > length) {
+        length = arr[i].length;}
       }
     }
-    return word;
+    return length;
     }
 
   // ---------------------
@@ -99,6 +150,16 @@
       return word;
      // finds the length of the longest word  
     }
+
+    // function filterLongWords (arr,i) {
+    //   const longWordsArr = [];
+    //   for(let j = 0; j < arr.length; j++) {
+    //     if(arr[j].length > i) {
+    //       longWordsArr.push(arr[j]);
+    //     }
+    //   }
+    //   return longWordsArr;
+    // }
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
@@ -116,6 +177,19 @@
     return freq;
   }
 
+  // function charFreq(str) {
+  //   const freqList = {}
+  //   for (let i = 0; i < str.length; i++) {
+  //     let testCase = str[i];
+  //     if(freqList[testCase]) {
+  //       freqList[testCase] = freqList[testCase] +1;
+  //       //freqList[testCase]++;
+  //     } else {
+  //       freqList[testCase] = 1;
+  //     }
+  //   }
+  //   return freqList;
+  // }
 
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
