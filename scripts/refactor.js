@@ -32,7 +32,7 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-var cool = function () {
+const cool = function () {
   console.log("Something Cool!");
 }
 cool();
@@ -59,6 +59,10 @@ const hi = function() {
 }
 
 setTimeout(hi, 2000);
+
+//setTimeout(function(){
+//   alert("Hello,World!")
+// }, 2000);
 
 // -----------------------------------------------
 
@@ -113,10 +117,10 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-var reverseStr = function (str) {
-  return str.split("").reverse().join("")
+const reverseStr = function(str) {
+  return str.split('').reverse().join('');
 }
-reverseStr("hello");
+
 
 // -----------------------------------------------
 
@@ -150,15 +154,19 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
-var spanishColor = function(colorName) {
-    var colorNames = {
-      'rojo': '#ff0000',
-      'blanco': '#ffffff',
-      'azul': '#0000ff',
-      'verde': '#00ff00',
-      'negro': '#000000',
+// const spanishColor = function(colorName) {
+    const colorName = {
+      rojo: "#ff0000",
+      blanco: "#ffffff",
+      azul: "#0000ff",
+      verde: "#00ff00",
+      negro: "#000000",
     }
-    return colorNames [colorName.toLowerCase()];
+//     return colorNames [colorName.toLowerCase()];
+// }
+
+const spanishColor = function(colorName) {
+  return colors[colorName];
 }
 
 // -----------------------------------------------
@@ -176,8 +184,9 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-var foo;
-  foo = "bar";
+let foo;
+  foo = "bar"; 
+  
 
 // -----------------------------------------------
 
@@ -201,10 +210,10 @@ var callTenTimes = function(callback) {
 // callTenTime(functionName);
 
 // Put your answer below -------------------------
-var callNTimes = function(callback){
-  var range = Array.from(Array(num).keys());
+const callNTimes = function(callback, i){
+  const range = Array.from(Array(i).keys());
   range.forEach(callback);
-};
+}
 
 // -----------------------------------------------
 
@@ -232,13 +241,14 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
-(function game () {
+(function() {
   var score = 0;
 
   var increaseScore = function() {
     score++;
   };
-
+                                      //using an IIFE don't need to name the function because you're immediately calling it
+                                      //Immediately Invoked Function Expression
   var decreaseScore = function() {
     score--;
   };
@@ -271,6 +281,10 @@ var twoPlusTwo = addNumbers(2,2);
 
  var twoPlusTwo = addNumbers(2,2);
 
+//  const addNumbers = function (numberA, numberB) {
+//    return (numberA + numberB);
+//  }
+
 
 // -----------------------------------------------
 
@@ -298,10 +312,8 @@ var accelerate = function(amount) {
 // Put your answer below -------------------------
 
 // Sets speed to NaN because the amount isn't clearly definded anywhere.
-// 
-var accelerate = function(amount) {
-  var speed = 0;
-  var amount = 
+// number + undefined = NaN
+var accelerate = function(amount = 1) {
   speed += amount;
 };
 
@@ -347,12 +359,12 @@ var callLater = function(timeout, callback) {
 };
 
 // Put your answer below -------------------------
-var callLater = function(timeout, callback) {
+const callLater = function(timeout, callback) {
   setTimeout (timeout,callback) 
     alert ('Timeout');
   };
 
-  setTimeout (callLater, 1000);
+  setTimeout(callLater, 1000);
 
 
 // -----------------------------------------------
