@@ -109,7 +109,7 @@
      var reverseArray = splitString.reverse();
      var joinArray = reverseArray.join ("");
      return joinArray;
-   }
+   };
 //.shift and .unshift (look up on MDN) targeting the beginning of an array
 //.push and .pop target the end of an array
 
@@ -136,12 +136,12 @@
       }
     }
     return length;
-    }
+    
 
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
-    function filterLongWords(arr,i) {
+ function filterLongWords(arr,i) {
       let word = "";
     for (let i = 0; i < arr.length; i++) {
       if (word.length < arr[i].length) {
@@ -149,7 +149,7 @@
       }
       return word;
      // finds the length of the longest word  
-    }
+    };
 
     // function filterLongWords (arr,i) {
     //   const longWordsArr = [];
@@ -226,4 +226,4 @@
   console.assert(charFreq('abbabcbdbabdbdbabababcbcbab').c === 3);
 
   console.assert(charFreq('abbabcbdbabdbdbabababcbcbab').d === 3);
-})();
+}) ();
